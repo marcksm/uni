@@ -1,0 +1,19 @@
+NOME: Marcos Vinicius do Carmo Sousa
+NUSP: 9298274
+
+A função iskcolor(G, i) recebe um grafo e um inteiro i e decide se é possível colorir
+o grafo com exatamente i cores. A função é recursiva e pode explorar todas as possibilidades,
+sendo sua complexidade O(V^k).
+Para comparação utiliza-se da função apresentada em sala de aula, UGRAPHseqColoring (G), que
+utiliza de uma heuristica para aproximar ao máximo do resultado. O programa imprime testes de
+vertices variando de 0 a 12 e as arestas E de 1 a V*V.
+Para cada conjunto de V e E, a função da heuristica roda 100 vezes para obter a média.
+
+Os resultados ficam em output e na saida padrão
+
+É possível notar que o programa o resultado da heuristica e do valor exato ficam
+iguais mais frequentemente com grafos próximo de completos. Apesar de não oferecer
+o resultado ideal, a heuristica tem uma boa aproximação e é muito mais rapido.
+
+
+Na main existe um teste implementado. basta rodar ./ep7

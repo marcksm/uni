@@ -1,0 +1,155 @@
+1) Considere o cubo n-dimensional, ou seja, o grafo cujo conjunto de vertices eh 
+{0, 1, ..., 2^n-1} e dois vertices sao adjacentes u e v sse as expansoes binarias
+de u e v diferem em exatamente 1 bit. Mostre que todo cubo n dimensional eh
+bicromatico.
+
+R) Para isso, seja A o conjunto de vertices cuja a quantidade de bits 1 eh impar
+e seja B o conjunto de vertices cuja a quantidade de bits eh par.Como dois vertices
+sao adjacentes sse eles diferirem em exatamente 1 bit, segue que nao temos arestas
+entre dois vertices em A ou entre dois vertices em B e o tamanho dos conjuntos
+eh o mesmo logo eh possivel formar um grafo bicromatico.
+
+2) Seja s um vertice qualquer de um grafo nao dirigido conexo G. Para cada vertice
+x pertencente a G, denote por d(x) a distancia de s a x (ou seja, menor numero de 
+arestas num caminho de s a x). Prove que, d(v) != d(w) para toda aresta v-w de G
+se e somente se G é bipartido.
+R)
+
+<= suponha que d(v) == d(w), para alguma aresta v-w, então existe dois caminhos de
+s a w e de s a v com o mesmo comprimento, sendo esse comprimento de paridade par
+ou impar. Se for par, par + par = temos um numero par assim como impar + impar = par
+somando mais um da aresta v-w temos um numero impar, formando um ciclo impar em qualquer
+dos dois cenarios, o que por definição não adminite bipartição uma contradição.
+
+=> Pela hipotese d(v) != d(w) para todo v-w, leva a conclusão que não há ciclos impares
+(vide volta) então, podemos dividir os vértices em dois conjuntos e teremos um grafo
+bipartido
+
+3) 
+R)Toda floresta é composta por arvores, cada arvore não tem ciclo, logo se não ha ciclos
+nao ha ciclos impares, então é bipartido.
+
+4)
+R)
+
+int GRAPH2color (UGraph G, int *color) {
+  int *dist = malloc (G->V * sizeof (int));
+  int *visit = malloc (G->V * sizeof (int));
+  for (int i = 0; i < G->V; i++) visit[i] = -1; dist[i] = INF;
+  QUEUE Q = QUEUEinit(G->V);
+  for (Vertex v = 0; v < G->V; v++)
+    if (visit[v] == -1) {
+      color[v] = 0;
+      if (!bfscolor (G, color, dist, visit, v)) return 0;
+    }
+  return 1;
+}
+
+int bfscolor (UGraph G, int *color, int *dist, int *visit, Vertex v) {
+  link p;
+  Queue Q;
+  Vertex w;
+  Q = QUEUEinit (G->V);
+  visit[v] = 1;
+  for (p = G->adj[v]; p != NULL; p = p->next) {
+    if (dist[p->w] == INF) {
+      dist[p->w] = 1;
+      color[p->w] = 1;
+      QUEUEinsert (Q, p);
+     }
+  }
+  int c = 1;
+  while (!QUEUEempty (Q)) {
+    Vertex y = QUEUEget (Q);
+    c = (c+1)%2;
+    visit[y] = 1;
+    for (p = G->adj[y]; p != NULL; p = p->next) {
+      w = p-w;
+      if (dist[w] == INF) {
+        dist[w] = dist[y] + 1;
+        color[w] = c;
+        QUEUEinsert(Q, w);
+      }
+//      else if (dist[y] + 1 < dist[w]) {
+  //      dist[w] = dist[y] + 1;
+    //  }
+      else if (dist[w] == dist[y]) return 0;
+    }
+  }
+  return 1;
+}
+
+
+5)**********
+R) Um exemplo é o grafo bipartido ligando todo mundo menos com o par direto dele,
+nisso ao rodar o algoritimo em sequencia, ele vai gerar V/2 cores e nao um bicolor.
+Para reduzir isso voce pode aleatorizar a escolha do 
+
+6)
+R)
+A função iskcolor(G, i) recebe um grafo e um inteiro i e decide se é possível colorir
+o grafo com exatamente i cores. A função é recursiva e pode explorar todas as possibilidades,
+sendo sua complexidade O(V^k).
+Para comparação utiliza-se da função apresentada em sala de aula, UGRAPHseqColoring (G), que
+utiliza de uma heuristica para aproximar ao máximo do resultado. O programa imprime testes de
+vertices variando de 0 a 12 e as arestas E de 1 a V*V.
+Para cada conjunto de V e E, a função da heuristica roda 100 vezes para obter a média.
+
+
+int recurcolor (Graph G, int *color, int k, Vertex v) {
+  int c = 0;
+  int not = 0;
+  if (v == G->V) return 1;
+
+  for (c = 1; c <= k; c++) {
+    //printf ("[%d,%d]\n",v, c);
+    not = 0;
+    for (int j = 0; j < G->V; j++) {
+      if (G->adj[v][j] == 1 && color[j] == c) {
+        not = 1;
+        break;
+      }
+    }
+    if (not == 1) { not = 0; continue; }
+    color[v] = c;
+    if (recurcolor (G, color, k, v + 1)) return 1;
+    color[v] = 0;
+  }
+  return 0;
+}
+
+int iskcolor (Graph G, int k) {
+  int *color = malloc (G->V * sizeof (int));
+  for (int i = 0; i < G->V; i++) color[i] = 0;
+  if (recurcolor (G, color, k, 0)) {free(color); return 1;}
+  free(color);
+  return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

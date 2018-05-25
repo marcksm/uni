@@ -1,0 +1,136 @@
+1)**** Digamos que a antidistancia de um vertice s a um vertice t e o custo de um caminho simples de custo maximo
+dentre os que vao de s a t. Modifique o algoritmo de Dijkstra da seguinte maneira: em cada iteraçao, escolha um 
+vertice y na fronteira de T que maximize dist[y]. Eh verdade que essa versao modificada calcula a antidistancia
+de um vertice s e cada um dos demais vertices de um grafo com custos positivos?
+R) ...
+
+
+2) Escreva uma funç~ao que receba conjuntos S e T de vertices de um grafo com custos positivos nos arcos
+e calcule a distancia de S a T, ou seja, o custo de um caminho minimo dentre os que começam em S e terminam
+em T.
+R) 
+int GRAPHmincostST (Graph G, Vertex *s, Vertex *t) {
+  Vertex *hook = malloc (G->V * sizeof (Vertex));  
+  PQUEUE PQ = PQUEUEiniti (G->V);
+  int *dist = malloc (G->V * sizeof (Vertex));
+  int *parent = malloc (G->V * sizeof (Vertex));
+  for (Vertex v = 0; v < G->V; v++) {
+    parent[v] = -1;
+    dist[v] = INF;
+  }
+  int k = 0;
+  for (k = 0; s[k] != 1; k++);
+  parent[k] = k;
+  dist[s] = 0;
+  for (link p = G->adj[s]; p != NULL; p = p->next) {
+    dist[p->w] = p->cst;
+    hook[p->w] = s;
+    PQinsert (PQ, p->w, p->cst);
+  }
+  while (!PQUEUEempty (PQ)) {
+    Vertex y = PQUEUEdelmin(PQ);
+    parent[y] = hook[y];
+    for (link p = G->adj[y]; p !=NULL; p = p->next) {
+      if (s[y] == 1 && s[p->w] == 0) {//SE ESTA CONTIDO EM S s[y] == 1, CC s[y] == 0
+        dist[p->w] = p->cst;
+        PQUEUEinsert (PQ, p->w, dist[p->w]);
+        hook[p->w] = y;
+      }
+      if (dist[p->w] == INF) {
+        dist[p->w] = dist[y] + p->cst;
+        PQUEUEinsert (PQ, p->w, dist[p->w]);
+        hook[p->w] = y;
+      }
+      else if (dist[p->w] > dist[y] + p->cst) {
+        dist[p->w] = dist[y] + p->cst;
+        hook[p->w] = y;
+        PQUEUEdec (PQ, p->w, dist[p->w]);
+      }
+   }
+  }
+ PQUEUEfree (PQ);
+ free(hook);
+ int min = INF;
+ k = 0;
+ for (int i = 0; i < G->V; i++) {
+   if (dist[i] < min && t[i] == 1) { min = dist[i]; k = i; }
+ }
+ return dist[k];
+}
+
+3)****** Escreva um algoritimo que encontre um arco cuja remoçao causa o maior
+aumento na distancia de um dado vertice s a um dado vertice t.
+R)
+
+4) O gargalo de um caminho num grafo com custos nos arcos eh o custo de um arco
+de custo minimo. Considere o problema de encontrar um caminho de gargalo maximo
+dentre todos os caminho que levam de um vertice s a um vertice t.
+
+R)
+
+void GRAPHsptD (Graph G, Vertex s, Vertex *parent, int *dist) {
+  Vertex *hook = malloc (G->V * sizeof (Vertex));
+  PQUEUE PQ = PQUEUEinit (G->V);
+  for (Vertex v = 0; v < G->V; v++) {
+    parent[v] = -1;
+    dist[v] = INF;
+  }
+  parent[s] = s;
+  dist[s] = 0;
+  for (link p = G->adj[s]; p != NULL; p = p->next) {
+    dist[p->w] = p->cst;
+    hook[p->w] - s;
+    PQinsert (PQ, p->w, p->cst);
+  }
+  while (!PQUEUEempty (PQ)) {
+    Vertex y = PQUEUEdelmax (PQ);
+    parent[y] = hook[y];
+    for (link p = G->adj[y]; p != NULL; p = p->next) {
+      if (dist[y] < p->cst) min = dist[y];
+      else min = p->cst;
+      if (dist[p->w] == INF) {
+        //min (dist[y],p->w);
+        dist[p->w] = min;
+        PQUEUEinsert (PQ, p->w, dist[p->w]);
+        hook[p->w] = y;
+      }
+	
+      else if (min > dist[p->w]) {
+        dist[p->w] = min;
+        hook[p->w] = y;
+        PQUEUEdec (PQ, p->w, dist[p->w]); //decrease priotiry
+      }
+    }
+  }
+
+  PQUEUEfree (PQ);
+  free(hook);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

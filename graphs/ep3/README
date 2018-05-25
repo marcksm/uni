@@ -1,0 +1,7 @@
+Nome: Marcos Vinicius do Carmo Sousa
+NUSP: 9298274
+
+Utilize make para compilar, e para executar rode ./ep3 [NUMERO DE VERTICES DO TESTE]
+O programa devolverá uma tabela com valores de A variando de 0.2, 0.5, 1, 2, 5, 10 e 20 Vertices,
+além da média de componentes fortemente conexas em 100 testes de V e A.
+

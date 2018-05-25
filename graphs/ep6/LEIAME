@@ -1,5 +1,3 @@
-NOME: Marcos Vinicius do Carmo Sousa
-NUSP: 9298274
 
 A função GRAPHminpath (G, weight, s, e), recebe um grafo, um vetor de pesos para cada vértice, um vértice marcando o inicio do caminho, e outro vértice marcando o fim, e devolve o caminho minimo caso exista.
 

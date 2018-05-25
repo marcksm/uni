@@ -1,5 +1,3 @@
-NOME: Marcos Vinicius do Carmo Sousa
-NUSP: 9298274
 
 A função iskcolor(G, i) recebe um grafo e um inteiro i e decide se é possível colorir
 o grafo com exatamente i cores. A função é recursiva e pode explorar todas as possibilidades,

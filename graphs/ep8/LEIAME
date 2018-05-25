@@ -1,5 +1,3 @@
-NOME: Marcos Vinicius do Carmo Sousa
-NUSP: 9298274
 
 A função augmentMatching(UGraph G, int *color, Vertex *match) devolve 1 caso encontre um emparelhamento melhor e altera o vetor match.
 É implementada usando pilha e dispensa o uso do vetor parent pois faz a operação do newMatching utilizando da recursão

@@ -1,5 +1,4 @@
-Nome: MARCOS VINICIUS DO CARMO SOUSA
-NUSP: 9298274
+
 
 Nesse exercicio foi feito a média das distancias entre dois vértices considerando somente os vértices que estão conectados em um grafo não dirigido. Utilizando V como vértices V = 50, 100, 150,  ..., 300
 e arestas E variando de 1 até V*V*V em passos de 2*E.

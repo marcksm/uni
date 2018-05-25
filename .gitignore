@@ -2,3 +2,7 @@
 *.class
 .c~
 .class
+.txt~
+*.txt~
+.swo
+*.swo

@@ -1,6 +1,3 @@
-NOME: Marcos Vinicius do Carmo Sousa
-NUSP: 9298274
-
 Para compilar: make
 
 Primeiro programa: PI

@@ -1,7 +1,7 @@
 /* ********************************************** */
 /*                                                */
 /*    MAC0211 - Laboratório de Programação I      */
-/*          Exercício-programa - Fase 3           */
+/*          Exercício-programa - Fase 4           */
 /*                                                */
 /*    Bárbara de Castro Fernandes - 7577351       */
 /*    Duílio Henrique Haroldo Elias - 6799722     */
@@ -23,16 +23,17 @@
 
 /*** Estruturas de dados criadas ***/
 typedef struct nave {
-        char nome[TAM_MAX_NOME];
-        float massa;
-        float raio;
-        float energia;
-        float angulo;
-        Vetor posicao;
-        Vetor velocidade;
-        Vetor aceleracao;
-        Vetor forca;
-        Boolean propulsaoAtivada;
+	char nome[TAM_MAX_NOME];
+	float massa;
+	float raio;
+	float energia;
+	float angulo;
+	Vetor posicao;
+	Vetor velocidade;
+	Vetor aceleracao;
+	Vetor forca;
+	Boolean propulsaoAtivada;
+	Boolean freioAtivado;
 } Nave;
 
 /*** Variáveis globais criadas ***/
@@ -63,6 +64,9 @@ void atualizaNave(int i);
  */
 Vetor posicaoRelativaNave(int i);
 
+/*
+ * Define o raio das naves, com base no tamanho do universo.
+ */
 void defineRaioNave();
 
 #endif

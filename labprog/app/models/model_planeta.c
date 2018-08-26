@@ -1,7 +1,7 @@
 /* ********************************************** */
 /*                                                */
 /*    MAC0211 - Laboratório de Programação I      */
-/*          Exercício-programa - Fase 3           */
+/*          Exercício-programa - Fase 4           */
 /*                                                */
 /*    Bárbara de Castro Fernandes - 7577351       */
 /*    Duílio Henrique Haroldo Elias - 6799722     */
@@ -14,12 +14,14 @@
 #include "model_universo.h"
 #include "model_planeta.h"
 
-#define ESCALA_RAIO_PLANETA 0.95 * tamanhoUniverso * ESCALA_PLANETA
+/*** Declaração de macros ***/
+#define ESCALA_RAIO_PLANETA 1.05 * tamanhoUniverso * ESCALA_PLANETA
 
+/*** Declaração das funções ***/
 void leituraPlaneta(FILE *entrada) {
-        planeta = mallocSafe(sizeof(Planeta));
-        fscanf(entrada, "%f %f", &planeta->raio, &planeta->massa);
-        inicializaVetor(&planeta->posicao);
+	planeta = mallocSafe(sizeof(Planeta));
+	fscanf(entrada, "%f %f", &planeta->raio, &planeta->massa);
+	inicializaVetor(&planeta->posicao);
 }
 
 void defineRaioPlaneta() {

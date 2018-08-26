@@ -1,7 +1,7 @@
 /* ********************************************** */
 /*                                                */
 /*    MAC0211 - Laboratório de Programação I      */
-/*          Exercício-programa - Fase 3           */
+/*          Exercício-programa - Fase 4           */
 /*                                                */
 /*    Bárbara de Castro Fernandes - 7577351       */
 /*    Duílio Henrique Haroldo Elias - 6799722     */
@@ -16,13 +16,14 @@
 #include <stdio.h>
 #include "model_vetor.h"
 
+/*** Declaração de macros ***/
 #define ESCALA_PLANETA 0.2
 
 /*** Estruturas de dados criadas ***/
 typedef struct planeta {
-        float raio;
-        float massa;
-        Vetor posicao;
+	float raio;
+	float massa;
+	Vetor posicao;
 } Planeta;
 
 /*** Variáveis globais criadas ***/
@@ -36,6 +37,10 @@ Planeta *planeta;
  * arquivo de entrada.
  */
 void leituraPlaneta(FILE *entrada);
+
+/*
+ * Define o raio do planeta, com base no tamanho do universo.
+ */
 void defineRaioPlaneta();
 
 #endif

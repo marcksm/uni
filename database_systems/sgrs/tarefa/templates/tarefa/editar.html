@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container">
+    <div class="row justify-content-md-center">
+        <div class="col-9">
+            <h1>Editar tarefa: {{ tarefa.nome }}</h1>
+            <hr>
+            <form method="post">
+                {% csrf_token %}
+                <p> Nome </p> <input type="text" name="nome" class="form-control" value="{{ tarefa.nome }}"/> </br>
+                <p> Descrição</p> <textarea name="descricao" class="form-control">{{ tarefa.descricao }}</textarea> </br>
+                <p> Data </p> <input type="date" name="deadline" class="form-control" value="{{ tarefa.deadline|date:'Y-m-d' }}"/> </br>
+                <p> Estado </p>
+                {% if tarefa.estado %}
+                    <input type="radio" name="estado" value="False">Em andamento
+                    <input type="radio" name="estado" value="True" checked="checked">Finalizada<br>
+                {% else %}
+                    <input type="radio" name="estado" value="False" checked="checked">Em andamento
+                    <input type="radio" name="estado" value="True">Finalizada<br>
+                {% endif %}
+                <button type="submit" class="btn btn-default">Editar</button>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}

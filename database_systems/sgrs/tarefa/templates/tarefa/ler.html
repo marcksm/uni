@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container">
+    <div class="row justify-content-md-center">
+        <div class="col-9">
+            <h1>Tarefa: {{ tarefa.nome }}</h1>
+            <a href="/projeto/{{ projeto.id }}/tarefa/" class="btn btn-secondary">Voltar</a>
+            <hr>
+            <p>{{ tarefa.descricao }}</p>
+        </div>
+    </div>
+    <dl class="row justify-content-md-center">
+        <dt class="col-3">Deadline</dt>
+        <dd class="col-6">{{ tarefa.deadline|date:"Y-M-D" }}</dd>
+    </dl>
+    <dl class="row justify-content-md-center">
+        <dt class="col-3">Estado</dt>
+        <dd class="col-6">{% if tarefa.estado %}Finalizado{% else %}Em andamento{% endif %}</dd>
+    </dl>
+    <dl class="row justify-content-md-center">
+        <dt class="col-3">Projeto</dt>
+        <dd class="col-6">{{ projeto.nome }}</dd>
+    </dl>
+    <dl class="row justify-content-md-center">
+        <dt class="col-3">Responsável</dt>
+        <dd class="col-6">{{ username_responsavel }}</dd>
+    </dl>
+    <div class="row justify-content-md-center">
+        <a href="/projeto/{{ projeto.id }}/tarefa/{{ tarefa.id }}/editar" class="btn btn-info right-margin">Editar</a>
+        <a href="/projeto/{{ projeto.id }}/tarefa/{{ tarefa.id }}/remover" class="btn btn-danger">Remover</a>
+    </div>
+</div>
+{% endblock %}

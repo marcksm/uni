@@ -1,7 +1,7 @@
 /* ********************************************** */
 /*                                                */
 /*    MAC0211 - Laboratório de Programação I      */
-/*          Exercício-programa - Fase 3           */
+/*          Exercício-programa - Fase 4           */
 /*                                                */
 /*    Bárbara de Castro Fernandes - 7577351       */
 /*    Duílio Henrique Haroldo Elias - 6799722     */
@@ -14,6 +14,6 @@
 
 /*** Declaração das funções ***/
 void inicializaVetor(Vetor *vetor) {
-        vetor->x = 0.0;
-        vetor->y = 0.0;
+	vetor->x = 0.0;
+	vetor->y = 0.0;
 }

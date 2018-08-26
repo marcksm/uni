@@ -1,7 +1,7 @@
 /* ********************************************** */
 /*                                                */
 /*    MAC0211 - Laboratório de Programação I      */
-/*          Exercício-programa - Fase 3           */
+/*          Exercício-programa - Fase 4           */
 /*                                                */
 /*    Bárbara de Castro Fernandes - 7577351       */
 /*    Duílio Henrique Haroldo Elias - 6799722     */
@@ -14,8 +14,6 @@
 
 /*** Bibliotecas inclusas ***/
 #include "model_vetor.h"
-
-/*** Macros definidas ***/
 
 /*** Variáveis globais criadas ***/
 float intervaloIteracao;
@@ -40,6 +38,6 @@ void normalizaPosicao(Vetor *posicao);
  * Função que desenha a textura dos objetos do universo
  * na janela.
  */
-void desenhaUniverso();
+void desenhaFundo();
 
 #endif

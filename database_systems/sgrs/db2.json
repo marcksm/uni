@@ -1,0 +1,365 @@
+[
+  {
+    "model": "requisito.Requisito",
+    "fields": {
+      "titulo": "Desenvolvedor",
+      "descricao": "Representa um desenvolvedor que trabalha em projetos. Um desenvolvedor tem nome, CPF, email (que identifica univocamente o desenvolvedor no sistema) e o hash de sua senha para login.",
+      "projeto": "2"
+    }
+  },
+  {
+    "model": "requisito.Requisito",
+    "fields": {
+      "titulo": "Projeto",
+      "descricao": "Representa um projeto cadastrado no sistema. Armazena o nome do projeto, uma descrição, o estado atual (concluído ou em andamento) e um identificador unívoco. Possui diversos requisitos.",
+      "projeto": "2"
+    }
+  },
+  {
+    "model": "requisito.Requisito",
+    "fields": {
+      "titulo": "Requisito",
+      "descricao": "Representa um requisito de dados com seus respectivos requisitos funcionais, relacionado a um projeto. Ele armazena o título do dado ao qual o requisito se refere, a descrição do dado, uma lista de funcionalidades aplicáveis sobre o dado e um identificador unívoco.",
+      "projeto": "2"
+    }
+  },
+  {
+    "model": "requisito.Requisito",
+    "fields": {
+      "titulo": "Tarefa",
+      "descricao": "Representa uma tarefa a ser feita no projeto. Armazena um nome, descrição e deadline de realização. Um número unívoco identifica cada tarefa. Apresenta um status para marcar se foi finalizada ou não.",
+      "projeto": "2"
+    }
+  },
+  {
+    "model": "requisito.Requisito",
+    "fields": {
+      "titulo": "Tecnologias",
+      "descricao": "Lista de tecnologias que serão utilizadas no desenvolvimento do jogo.",
+      "projeto": "1"
+    }
+  },
+  {
+    "model": "requisito.Requisito",
+    "fields": {
+      "titulo": "Dados de som",
+      "descricao": "Representa um banco com dados de som para o jogo.",
+      "projeto": "1"
+    }
+  },
+  {
+    "model": "requisito.Requisito",
+    "fields": {
+      "titulo": "Dados de video",
+      "descricao": "Representa um banco com dados de video para o jogo.",
+      "projeto": "1"
+    }
+  },
+  {
+    "model": "requisito.Requisito",
+    "fields": {
+      "titulo": "Publico alvo",
+      "descricao": "Representa o público ao qual o jogo é destinado",
+      "projeto": "1"
+    }
+  },
+  {
+    "model": "requisito.Requisito",
+    "fields": {
+      "titulo": "Engine",
+      "descricao": "Realiza os cálculos da fisica do jogo",
+      "projeto": "1"
+    }
+  },
+  {
+    "model": "requisito.Requisito",
+    "fields": {
+      "titulo": "Desenvolvedor",
+      "descricao": "Contém email, senha e tipo (se é avaliador ou avaliado) ele é identificado pelo email e senha, sendo a união única",
+      "projeto": "3"
+    }
+  },
+  {
+    "model": "requisito.Requisito",
+    "fields": {
+      "titulo": "Projeto",
+      "descricao": "Representa um projeto cadastrado no sistema. Armazena o nome do projeto, uma descrição, desenvolvedores e o código fonte.",
+      "projeto": "3"
+    }
+  },
+  {
+    "model": "requisito.Requisito",
+    "fields": {
+      "titulo": "Métricas",
+      "descricao": "Recebe um projeto e avalia utilizando métrica de código.",
+      "projeto": "3"
+    }
+  },
+  {
+    "model": "requisito.Requisito",
+    "fields": {
+      "titulo": "Avaliação",
+      "descricao": "Contém desenvolvedores que avaliam e desenvolvedores que são avaliados",
+      "projeto": "3"
+    }
+  },
+  {
+    "model": "desenvolvedor.Trabalha_em",
+    "fields": {
+      "user": "1",
+      "projeto": "2"
+    }
+  },
+  {
+    "model": "desenvolvedor.Trabalha_em",
+    "fields": {
+      "user": "2",
+      "projeto": "2"
+    }
+  },
+  {
+    "model": "desenvolvedor.Trabalha_em",
+    "fields": {
+      "user": "3",
+      "projeto": "2"
+    }
+  },
+  {
+    "model": "desenvolvedor.Trabalha_em",
+    "fields": {
+      "user": "4",
+      "projeto": "2"
+    }
+  },
+  {
+    "model": "desenvolvedor.Trabalha_em",
+    "fields": {
+      "user": "5",
+      "projeto": "2"
+    }
+  },
+  {
+    "model": "desenvolvedor.Trabalha_em",
+    "fields": {
+      "user": "1",
+      "projeto": "1"
+    }
+  },
+  {
+    "model": "desenvolvedor.Trabalha_em",
+    "fields": {
+      "user": "2",
+      "projeto": "1"
+    }
+  },
+  {
+    "model": "desenvolvedor.Trabalha_em",
+    "fields": {
+      "user": "3",
+      "projeto": "1"
+    }
+  },
+  {
+    "model": "desenvolvedor.Trabalha_em",
+    "fields": {
+      "user": "4",
+      "projeto": "1"
+    }
+  },
+  {
+    "model": "desenvolvedor.Trabalha_em",
+    "fields": {
+      "user": "5",
+      "projeto": "1"
+    }
+  },
+  {
+    "model": "desenvolvedor.Trabalha_em",
+    "fields": {
+      "user": "1",
+      "projeto": "3"
+    }
+  },
+  {
+    "model": "desenvolvedor.Trabalha_em",
+    "fields": {
+      "user": "2",
+      "projeto": "3"
+    }
+  },
+  {
+    "model": "desenvolvedor.Trabalha_em",
+    "fields": {
+      "user": "3",
+      "projeto": "3"
+    }
+  },
+  {
+    "model": "desenvolvedor.Trabalha_em",
+    "fields": {
+      "user": "4",
+      "projeto": "3"
+    }
+  },
+  {
+    "model": "desenvolvedor.Trabalha_em",
+    "fields": {
+      "user": "5",
+      "projeto": "3"
+    }
+  },
+  {
+    "model": "tarefa.Tarefa",
+    "fields": {
+      "nome": "Diagrama",
+      "descricao": "Fazer diagrama entidade relacionamento",
+      "deadline": "2017-09-10",
+      "estado": "False",
+      "user": "1",
+      "projeto": "2"
+    }
+  },
+  {
+    "model": "tarefa.Tarefa",
+    "fields": {
+      "nome": "Modelo Lógico",
+      "descricao": "Fazer o esquema relacional",
+      "deadline": "2017-09-12",
+      "estado": "False",
+      "user": "2",
+      "projeto": "2"
+    }
+  },
+  {
+    "model": "tarefa.Tarefa",
+    "fields": {
+      "nome": "Modelo Físico",
+      "descricao": "Fazer SQL",
+      "deadline": "2017-09-10",
+      "estado": "False",
+      "user": "3",
+      "projeto": "2"
+    }
+  },
+  {
+    "model": "tarefa.Tarefa",
+    "fields": {
+      "nome": "Entrega",
+      "descricao": "Enviar no paca",
+      "deadline": "2017-09-11",
+      "estado": "False",
+      "user": "4",
+      "projeto": "2"
+    }
+  },
+  {
+    "model": "tarefa.Tarefa",
+    "fields": {
+      "nome": "Decisão engine",
+      "descricao": "Tomar uma decisão sobre a engine a ser utilizada no desenvolvimento",
+      "deadline": "2018-09-10",
+      "estado": "False",
+      "user": "2",
+      "projeto": "1"
+    }
+  },
+  {
+    "model": "tarefa.Tarefa",
+    "fields": {
+      "nome": "Divisão de tarefas",
+      "descricao": "Fazer a divisão de tarefas conforme as capacidades tecnicas dos desenvolvedores",
+      "deadline": "2018-09-12",
+      "estado": "False",
+      "user": "3",
+      "projeto": "1"
+    }
+  },
+  {
+    "model": "tarefa.Tarefa",
+    "fields": {
+      "nome": "Tela inicial",
+      "descricao": "Desenhar uma bola vermelha na tela inicial do jogo",
+      "deadline": "2018-10-11",
+      "estado": "False",
+      "user": "1",
+      "projeto": "1"
+    }
+  },
+  {
+    "model": "tarefa.Tarefa",
+    "fields": {
+      "nome": "Testes",
+      "descricao": "Realizar testes de performace",
+      "deadline": "2018-10-30",
+      "estado": "False",
+      "user": "5",
+      "projeto": "1"
+    }
+  },
+  {
+    "model": "tarefa.Tarefa",
+    "fields": {
+      "nome": "Entrega",
+      "descricao": "Enviar para o time de vendas",
+      "deadline": "2018-11-11",
+      "estado": "False",
+      "user": "4",
+      "projeto": "1"
+    }
+  },
+  {
+    "model": "tarefa.Tarefa",
+    "fields": {
+      "nome": "Cadastro de desenvolvedores",
+      "descricao": "Módulo para desenvolvedores se cadastrarem",
+      "deadline": "2019-11-11",
+      "estado": "False",
+      "user": "1",
+      "projeto": "3"
+    }
+  },
+  {
+    "model": "tarefa.Tarefa",
+    "fields": {
+      "nome": "Cadastro de projetos",
+      "descricao": "Módulo para cadastro de projetos de computação.",
+      "deadline": "2019-11-11",
+      "estado": "False",
+      "user": "2",
+      "projeto": "3"
+    }
+  },
+  {
+    "model": "tarefa.Tarefa",
+    "fields": {
+      "nome": "Metricas",
+      "descricao": "Sistema de métricas de software.",
+      "deadline": "2019-11-11",
+      "estado": "False",
+      "user": "3",
+      "projeto": "3"
+    }
+  },
+  {
+    "model": "tarefa.Tarefa",
+    "fields": {
+      "nome": "Submeter",
+      "descricao": "Módulo para submeter o projeto.",
+      "deadline": "2019-09-11",
+      "estado": "False",
+      "user": "2",
+      "projeto": "3"
+    }
+  },
+  {
+    "model": "tarefa.Tarefa",
+    "fields": {
+      "nome": "Avaliação",
+      "descricao": "Receber avaliação de desenvolvedores.",
+      "deadline": "2019-12-11",
+      "estado": "False",
+      "user": "3",
+      "projeto": "3"
+    }
+  }
+]

@@ -2,4 +2,4 @@
 set -e
 make clean
 make
-./batalha-espacial test/teste6 0.0017
+./batalha-espacial test/teste 0.017

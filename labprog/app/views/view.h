@@ -1,7 +1,7 @@
 /* ********************************************** */
 /*                                                */
 /*    MAC0211 - Laboratório de Programação I      */
-/*          Exercício-programa - Fase 3           */
+/*          Exercício-programa - Fase 4           */
 /*                                                */
 /*    Bárbara de Castro Fernandes - 7577351       */
 /*    Duílio Henrique Haroldo Elias - 6799722     */
@@ -17,8 +17,11 @@
 
 /*** Variáveis globais criadas ***/
 GLfloat ratio;
-GLuint texturas[5];
-GLuint texturasNave[2][4];
+GLuint texturas[3];
+GLuint texturasFim[3];
+GLuint texturasBarra[2][11];
+GLuint texturasNave[2][5];
+GLuint texturasHud[2][11];
 
 /*** Protótipos das funções ***/
 /*
@@ -27,5 +30,10 @@ GLuint texturasNave[2][4];
  * da parte gráfica.
  */
 void inicializaParteGrafica(int argc, char *argv[]);
+
+/*
+ * Função responsável por desenhar os componentes da tela a cada iteração.
+ */
+void desenha();
 
 #endif

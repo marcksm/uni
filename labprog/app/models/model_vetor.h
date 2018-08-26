@@ -1,7 +1,7 @@
 /* ********************************************** */
 /*                                                */
 /*    MAC0211 - Laboratório de Programação I      */
-/*          Exercício-programa - Fase 3           */
+/*          Exercício-programa - Fase 4           */
 /*                                                */
 /*    Bárbara de Castro Fernandes - 7577351       */
 /*    Duílio Henrique Haroldo Elias - 6799722     */
@@ -14,8 +14,8 @@
 
 /*** Estruturas de dados criadas ***/
 typedef struct vetor {
-        float x;
-        float y;
+	float x;
+	float y;
 } Vetor;
 
 typedef enum boolean {FALSE, TRUE} Boolean;

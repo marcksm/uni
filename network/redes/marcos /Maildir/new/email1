@@ -1,0 +1,61 @@
+Return-Path: <marcos@exemplo.com.br>
+X-Original-To: rodrigo@exemplo.com.br
+Delivered-To: rodrigo@exemplo.com.br
+Received: from [127.0.0.1] (localhost [127.0.0.1])
+	by exemplo.com.br (Postfix) with ESMTPS id 5C4D312219D
+	for <rodrigo@exemplo.com.br>; Sun, 20 Aug 2017 18:33:15 -0300 (BRT)
+To: rodrigo@esprit.com.br
+From: Marcos <marcos@exemplo.com.br>
+Subject: email com anexo
+Message-ID: <e42e7ed8-e5dc-3378-52ea-3381ca33b52f@exemplo.com.br>
+Date: Sun, 20 Aug 2017 18:33:15 -0300
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:52.0) Gecko/20100101
+ Thunderbird/52.2.1
+MIME-Version: 1.0
+Content-Type: multipart/mixed;
+ boundary="------------E7F6619575800D697B5256E5"
+Content-Language: en-US
+
+This is a multi-part message in MIME format.
+--------------E7F6619575800D697B5256E5
+Content-Type: text/plain; charset=utf-8; format=flowed
+Content-Transfer-Encoding: 7bit
+
+Corpo do email. Segue o anexo.
+
+
+--------------E7F6619575800D697B5256E5
+Content-Type: image/png;
+ name="dracma.png"
+Content-Transfer-Encoding: base64
+Content-Disposition: attachment;
+ filename="dracma.png"
+
+iVBORw0KGgoAAAANSUhEUgAAAIAAAACACAQAAABpN6lAAAAACXBIWXMAAAsTAAALEwEAmpwY
+AAADGGlDQ1BQaG90b3Nob3AgSUNDIHByb2ZpbGUAAHjaY2BgnuDo4uTKJMDAUFBUUuQe5BgZ
+ERmlwH6egY2BmYGBgYGBITG5uMAxIMCHgYGBIS8/L5UBFTAyMHy7xsDIwMDAcFnX0cXJlYE0
+wJpcUFTCwMBwgIGBwSgltTiZgYHhCwMDQ3p5SUEJAwNjDAMDg0hSdkEJAwNjAQMDg0h2SJAz
+AwNjCwMDE09JakUJAwMDg3N+QWVRZnpGiYKhpaWlgmNKflKqQnBlcUlqbrGCZ15yflFBflFi
+SWoKAwMD1A4GBgYGXpf8EgX3xMw8BSMDVQYqg4jIKAUICxE+CDEESC4tKoMHJQODAIMCgwGD
+A0MAQyJDPcMChqMMbxjFGV0YSxlXMN5jEmMKYprAdIFZmDmSeSHzGxZLlg6WW6x6rK2s99gs
+2aaxfWMPZ9/NocTRxfGFM5HzApcj1xZuTe4FPFI8U3mFeCfxCfNN45fhXyygI7BD0FXwilCq
+0A/hXhEVkb2i4aJfxCaJG4lfkaiQlJM8JpUvLS19QqZMVl32llyfvIv8H4WtioVKekpvldeq
+FKiaqP5UO6jepRGqqaT5QeuA9iSdVF0rPUG9V/pHDBYY1hrFGNuayJsym740u2C+02KJ5QSr
+OutcmzjbQDtXe2sHY0cdJzVnJRcFV3k3BXdlD3VPXS8Tbxsfd99gvwT//ID6wIlBS4N3hVwM
+fRnOFCEXaRUVEV0RMzN2T9yDBLZE3aSw5IaUNak30zkyLDIzs+ZmX8xlz7PPryjYVPiuWLsk
+q3RV2ZsK/cqSql01jLVedVPrHzbqNdU0n22VaytsP9op3VXUfbpXta+x/+5Em0mzJ/+dGj/t
+8AyNmf2zvs9JmHt6vvmCpYtEFrcu+bYsc/m9lSGrTq9xWbtvveWGbZtMNm/ZarJt+w6rnft3
+u+45uy9s/4ODOYd+Hmk/Jn58xUnrU+fOJJ/9dX7SRe1LR68kXv13fc5Nm1t379TfU75/4mHe
+Y7En+59lvhB5efB1/lv5dxc+NH0y/fzq64Lv4T8Ffp360/rP8f9/AA0ADzT6lvFdAAAAIGNI
+Uk0AAHolAACAgwAA+f8AAIDpAAB1MAAA6mAAADqYAAAXb5JfxUYAAAIRSURBVHja7NvhzYMg
+EIDhw3QI92AMJulETuIY7OEWfj+sLWr9ahORK/fSP01qm9zDcSBSN4rt1ggAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+QEXtluuHw6e/o7leBYAbSwSvCKEpGL7IGGrLgDT4+z/XdWry4ESAZc/fP1zdKRkMpwEc7fs9
+hN5VMgssg4+rT/3m2q6uIrgNf0heInFDci8McMv301GGaXDMSS6DiLQSV3lQJcDU96/gZ4he
+BmltLIWn8OOqFgTR1jLeC4Rn6NHazdA8+qeqHzfV30QGvPrfq86B7LfDXnX/Z50G04WPf0yE
+hgD6nYHRWwEI8hutuSoDoi2A9k3o0Q7Au5KntQxmygAvbRJu3MmNytcBM8F6IeRtAPikt2eC
+3koN2I56vyIxshROK4FXOQAuuBdoP6wNKwfwu6sDMxmw7HtvE0Dzgri5MuBBIUGTM/jl3nCQ
+6SlBVIWQNQOG1dZ4eCAYGgJhsy+gbZ8g85aYzrk/I0C3eNbXHvpG2cbj8fMoZUwD+/aARA1F
+0KVhdMfDd+XCP/eIzPxm/AqtcLk8+5DUdwSu/FyR4ZzgQQQFwWcC+K3GYWkAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAMtL8BAAyvaQhtpHXnAAAAAElFTkSuQmCC
+--------------E7F6619575800D697B5256E5--

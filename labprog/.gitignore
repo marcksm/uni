@@ -1,0 +1,15 @@
+# Arquivos .o
+*.o
+
+# Executáveis
+batalha-espacial
+
+# Pasta arquivos-auxiliares
+/arquivos-auxiliares
+
+#Arquivos ~
+*~
+
+#ide Duilio
+
+.idea/**/*

@@ -1,0 +1,10 @@
+Coloridas:
+1   Enunciado
+2   Parecida com a do enunciado, classe C²: sin(x), (sin(y / 10) + sin(x / 10)) / 2, sin(x)
+3   Função sem derivada em alguns pontos:  x / 150, mod (x / 10, 2), y / 300
+4   Função de classe C¹, mas não de classe C²: x / 150 + y / 600, ((x ^ 4 + y ^ 4) / x ^ 2 + y ^ 2) * (2 * 151 ^ 2 / 2 * 151 ^ 4), x / 300 + y / 150
+
+Pretibrancas:
+1  Função de classe C²: cos((x) / 151 * pi) + cos((y) / 151 * pi)]
+2  Função sem derivada em alguns pontos: mod (x / 10, 2)
+3  Função de classe C¹, mas não de classe C²: (x ^ 2) / (x ^ 2 + y ^ 2) ^ 0.5 / 151

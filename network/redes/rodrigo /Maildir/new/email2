@@ -1,0 +1,20 @@
+Return-Path: <marcos@exemplo.com.br>
+X-Original-To: rodrigo@exemplo.com.br
+Delivered-To: rodrigo@exemplo.com.br
+Received: from [127.0.0.1] (localhost [127.0.0.1])
+	by exemplo.com.br (Postfix) with ESMTPS id 76FBF122178
+	for <rodrigo@exemplo.com.br>; Sun, 20 Aug 2017 18:36:24 -0300 (BRT)
+To: rodrigo@exemplo.com.br
+From: marcos <marcos@exemplo.com.br>
+Subject: Email sem anexo
+Message-ID: <e7375f58-562b-7895-0f16-fc7819d7b00b@esprit.com>
+Date: Sun, 20 Aug 2017 18:36:24 -0300
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:52.0) Gecko/20100101
+ Thunderbird/52.2.1
+MIME-Version: 1.0
+Content-Type: text/plain; charset=utf-8; format=flowed
+Content-Transfer-Encoding: 7bit
+Content-Language: en-US
+
+Corpo do email sem anexo.
+

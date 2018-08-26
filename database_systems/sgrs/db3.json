@@ -1,0 +1,261 @@
+[
+  {
+    "model": "requisito.Funcionalidades",
+    "fields": {
+      "requisito": "1",
+      "descricao": "Um desenvolvedor pode se cadastrar no sistema."
+    }
+  },
+  {
+    "model": "requisito.Funcionalidades",
+    "fields": {
+      "requisito": "1",
+      "descricao": "O cadastro pode ser atualizado apenas pelo próprio desenvolvedor."
+    }
+  },
+  {
+    "model": "requisito.Funcionalidades",
+    "fields": {
+      "requisito": "1",
+      "descricao": "O desenvolvedor pode ser consultado apenas por desenvolvedores cadastrados."
+    }
+  },
+  {
+    "model": "requisito.Funcionalidades",
+    "fields": {
+      "requisito": "1",
+      "descricao": "O cadastro pode ser removido apenas pelo próprio desenvolvedor desde que ele não esteja participando de nenhum projeto."
+    }
+  },
+  {
+    "model": "requisito.Funcionalidades",
+    "fields": {
+      "requisito": "2",
+      "descricao": "Um desenvolvedor pode criar um projeto."
+    }
+  },
+  {
+    "model": "requisito.Funcionalidades",
+    "fields": {
+      "requisito": "2",
+      "descricao": "Um desenvolvedor participa de 0 ou mais projetos.'"
+    }
+  },
+  {
+    "model": "requisito.Funcionalidades",
+    "fields": {
+      "requisito": "2",
+      "descricao": "Um projeto é vinculado a 1 ou mais desenvolvedores."
+    }
+  },
+  {
+    "model": "requisito.Funcionalidades",
+    "fields": {
+      "requisito": "2",
+      "descricao": "Um projeto pode ser atualizado e removido apenas pelos desenvolvedores vinculados."
+    }
+  },
+  {
+    "model": "requisito.Funcionalidades",
+    "fields": {
+      "requisito": "2",
+      "descricao": "O nome do projeto pode ser visto por todos os desenvolvedores, porém os outros detalhes (descrição, estado e o identificador unívoco) só pelos desenvolvedores vinculados."
+    }
+  },
+  {
+    "model": "requisito.Funcionalidades",
+    "fields": {
+      "requisito": "3",
+      "descricao": "Um desenvolvedor vinculado a um projeto pode criar um requisito. Esse requisito fica vinculado a esse projeto."
+    }
+  },
+  {
+    "model": "requisito.Funcionalidades",
+    "fields": {
+      "requisito": "3",
+      "descricao": "Um requisito é vinculado a apenas 1 projeto."
+    }
+  },
+  {
+    "model": "requisito.Funcionalidades",
+    "fields": {
+      "requisito": "3",
+      "descricao": "Pode ser atualizado e removido apenas pelos desenvolvedores vinculados."
+    }
+  },
+  {
+    "model": "requisito.Funcionalidades",
+    "fields": {
+      "requisito": "3",
+      "descricao": "Os atributos do requisito podem ser vistos por todos os desenvolvedores vinculados ao projeto."
+    }
+  },
+  {
+    "model": "requisito.Funcionalidades",
+    "fields": {
+      "requisito": "4",
+      "descricao": "Um desenvolvedor que participa de um projeto pode criar, editar e remover tarefas para aquele projeto. Quem cria a tarefa é um desenvolvedor responsável por ela."
+    }
+  },
+  {
+    "model": "requisito.Funcionalidades",
+    "fields": {
+      "requisito": "4",
+      "descricao": "Pode ser atualizado para “em progresso” ou “finalizada”."
+    }
+  },
+  {
+    "model": "requisito.Funcionalidades",
+    "fields": {
+      "requisito": "4",
+      "descricao": "A tarefa pode ser lida apenas pelos integrantes do projetos."
+    }
+  },
+  {
+    "model": "requisito.Funcionalidades",
+    "fields": {
+      "requisito": "4",
+      "descricao": "Pode ser atualizado para “em progresso” ou “finalizada”."
+    }
+  },
+  {
+    "model": "requisito.Funcionalidades",
+    "fields": {
+      "requisito": "5",
+      "descricao": "Um desenvolvedor pode consultar e utilizar as tecnologias do jogo."
+    }
+  },
+  {
+    "model": "requisito.Funcionalidades",
+    "fields": {
+      "requisito": "5",
+      "descricao": "Um desenvolvedor pode cadastrar e remover as novas tecnologias para jogo."
+    }
+  },
+  {
+    "model": "requisito.Funcionalidades",
+    "fields": {
+      "requisito": "6",
+      "descricao": "Um desenvolvedor pode consultar e utilizar dados de som."
+    }
+  },
+  {
+    "model": "requisito.Funcionalidades",
+    "fields": {
+      "requisito": "6",
+      "descricao": "Um desenvolvedor pode cadastrar e remover dados de som."
+    }
+  },
+  {
+    "model": "requisito.Funcionalidades",
+    "fields": {
+      "requisito": "7",
+      "descricao": "Um desenvolvedor pode consultar e utilizar dados de video."
+    }
+  },
+  {
+    "model": "requisito.Funcionalidades",
+    "fields": {
+      "requisito": "7",
+      "descricao": "Um desenvolvedor pode cadastrar e remover dados de video."
+    }
+  },
+  {
+    "model": "requisito.Funcionalidades",
+    "fields": {
+      "requisito": "8",
+      "descricao": "Um desenvolvedor pode checar o publico alvo do jogo."
+    }
+  },
+  {
+    "model": "requisito.Funcionalidades",
+    "fields": {
+      "requisito": "9",
+      "descricao": "A engine utilizado é acessivel por todos os desenvolvdores."
+    }
+  },
+  {
+    "model": "requisito.Funcionalidades",
+    "fields": {
+      "requisito": "10",
+      "descricao": "Um desenvolvedor pode se cadastrar no sistema."
+    }
+  },
+  {
+    "model": "requisito.Funcionalidades",
+    "fields": {
+      "requisito": "10",
+      "descricao": "O desenvolvedor pode ser registrar projetos de autoria dele, ou de um grupo em que ele participa, ou avaliar projetos de outros desenvolvedores."
+    }
+  },
+  {
+    "model": "requisito.Funcionalidades",
+    "fields": {
+      "requisito": "11",
+      "descricao": "Um desenvolvedor pode criar ou excluir um projeto."
+    }
+  },
+  {
+    "model": "requisito.Funcionalidades",
+    "fields": {
+      "requisito": "11",
+      "descricao": "Um desenvolvedor participa de 0 ou mais projetos."
+    }
+  },
+  {
+    "model": "requisito.Funcionalidades",
+    "fields": {
+      "requisito": "11",
+      "descricao": "Um projeto é vinculado a 1 ou mais desenvolvedores."
+    }
+  },
+  {
+    "model": "requisito.Funcionalidades",
+    "fields": {
+      "requisito": "11",
+      "descricao": "Um projeto pode ser atualizado e removido apenas pelos desenvolvedores vinculados."
+    }
+  },
+  {
+    "model": "requisito.Funcionalidades",
+    "fields": {
+      "requisito": "11",
+      "descricao": "Um projeto pode ser público, privado ou seleto para alguns desenvolvedores avaliarem."
+    }
+  },
+  {
+    "model": "requisito.Funcionalidades",
+    "fields": {
+      "requisito": "12",
+      "descricao": "As métricas são visiveis para os desenvolvedores do projeto."
+    }
+  },
+  {
+    "model": "requisito.Funcionalidades",
+    "fields": {
+      "requisito": "12",
+      "descricao": "As métricas podem ser públicas caso o desenvolvedor opte."
+    }
+  },
+  {
+    "model": "requisito.Funcionalidades",
+    "fields": {
+      "requisito": "12",
+      "descricao": "As métricas são escolhidas pelos desenvolvedores avaliadores."
+    }
+  },
+  {
+    "model": "requisito.Funcionalidades",
+    "fields": {
+      "requisito": "13",
+      "descricao": "Avaliação é feita pelos desenvolvedores avaliadores e é baseada nas métricas."
+    }
+  },
+  {
+    "model": "requisito.Funcionalidades",
+    "fields": {
+      "requisito": "13",
+      "descricao": "Um projeto pode ter mais de uma avaliação."
+    }
+  }
+]

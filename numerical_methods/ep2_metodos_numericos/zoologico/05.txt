@@ -1,0 +1,180 @@
+color1.png
+k = 1
+bilinear
+ans =  0.29000
+
+bicubica
+ans =  0.26498
+
+k = 2
+bilinear
+ans =  0.50227
+
+bicubica
+ans =  0.48779
+
+k = 3
+bilinear
+ans =  0.58184
+
+bicubica
+ans =  0.59229
+
+
+
+
+
+color2.png
+k = 1
+bilinear
+ans =  0.23227
+
+bicubica
+ans =  0.21307
+
+k = 2
+bilinear
+ans =  0.40399
+
+bicubica
+ans =  0.39294
+
+k = 3
+bilinear
+ans =  0.47240
+
+bicubica
+ans =  0.48017
+
+
+
+
+
+color3.png
+k = 1
+bilinear
+ans =  0.048038
+
+bicubica
+ans =  0.035914
+
+k = 2
+bilinear
+ans =  0.095916
+
+bicubica
+ans =  0.093042
+
+k = 3
+bilinear
+ans =  0.12602
+
+bicubica
+ans =  0.12445
+
+
+
+
+
+color4.png
+k = 1
+bilinear
+ans =  0.0056564
+
+bicubica
+ans =  0.0050535
+
+k = 2
+bilinear
+ans =  0.011387
+
+bicubica
+ans =  0.010540
+
+k = 3
+bilinear
+ans =  0.016902
+
+bicubica
+ans =  0.016035
+
+
+
+pb1.png
+k = 1
+bilinear
+ans =  0.0090530
+
+bicubica
+ans =  0.0085202
+
+k = 2
+bilinear
+ans =  0.017994
+
+bicubica
+ans =  0.017062
+
+k = 3
+bilinear
+ans =  0.026899
+
+bicubica
+ans =  0.025988
+
+
+
+
+
+pb2.png
+k = 1
+bilinear
+ans =  0.058445
+
+bicubica
+ans =  0.042703
+
+k = 2
+bilinear
+ans =  0.11739
+
+bicubica
+ans =  0.11466
+
+k = 3
+bilinear
+ans =  0.15238
+
+bicubica
+ans =  0.15153
+
+
+
+
+
+pb3.png
+k = 1
+bilinear
+ans =  0.0024998
+
+bicubica
+ans =  0.0023330
+
+k = 2
+bilinear
+ans =  0.0045605
+
+bicubica
+ans =  0.0041326
+
+k = 3
+bilinear
+ans =  0.0067511
+
+bicubica
+ans =  0.0062601
+
+
+
+
+

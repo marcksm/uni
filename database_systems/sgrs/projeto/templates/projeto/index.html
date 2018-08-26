@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container">
+    <div class="row justify-content-md-center">
+        <div class="col-9">
+            <h1>Projetos</h1>
+            <p>Veja os últimos 10 projetos criados no SGRS:</p>
+            <hr>
+        </div>
+    </div>
+    {% if projetos %}
+        {% for projeto in projetos %}
+        <div class="row justify-content-md-center">
+            <dl class="col-9 row">
+                <dt class="col-3">{{ projeto.nome }}</dt>
+                <dd class="col-6">{{ projeto.descricao|truncatewords:30 }}</dd>
+            </dl>
+        </div>
+        {% endfor %}
+        <div class="row justify-content-md-center">
+            <a href="/projeto/todos" class="col-2 btn btn-info">Ver Todos</a>
+        </div>
+        <div class="row justify-content-md-center bottom-margin">
+            <p class="col-2">(Pode demorar um pouco)</p>
+        </div>
+    {% else %}
+        <br>
+        <div class="alert alert-info" role="alert">Nenhuma projeto foi criado ainda.</div>
+    {% endif %}
+</div>
+{% endblock %}

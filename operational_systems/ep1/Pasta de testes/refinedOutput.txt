@@ -1,0 +1,18 @@
+Quantidade de deadlines média cumpridas pelo escalonador 1 com 10 processos: 2.033333 +- 0.630428
+Quantidade de mudanças de contexto média cumpridas pelo escalonador 1 com 10 processos: 0.000000 +- 0.000000
+Quantidade de deadlines média cumpridas pelo escalonador 2 com 10 processos: 3.866667 +- 0.430871
+Quantidade de mudanças de contexto média cumpridas pelo escalonador 2 com 10 processos: 3.500000 +- 0.457049
+Quantidade de deadlines média cumpridas pelo escalonador 3 com 10 processos: 1.733333 +- 0.745012
+Quantidade de mudanças de contexto média cumpridas pelo escalonador 3 com 10 processos: 31.900000 +- 8.403270
+Quantidade de deadlines média cumpridas pelo escalonador 1 com 100 processos: 2.000000 +- 0.746728
+Quantidade de mudanças de contexto média cumpridas pelo escalonador 1 com 100 processos: 0.000000 +- 0.000000
+Quantidade de deadlines média cumpridas pelo escalonador 2 com 100 processos: 31.233333 +- 4.266223
+Quantidade de mudanças de contexto média cumpridas pelo escalonador 2 com 100 processos: 32.033333 +- 4.132326
+Quantidade de deadlines média cumpridas pelo escalonador 3 com 100 processos: 1.400000 +- 0.581933
+Quantidade de mudanças de contexto média cumpridas pelo escalonador 3 com 100 processos: 329.266667 +- 111.054824
+Quantidade de deadlines média cumpridas pelo escalonador 1 com 300 processos: 9.733333 +- 87.854744
+Quantidade de mudanças de contexto média cumpridas pelo escalonador 1 com 300 processos: 0.000000 +- 0.000000
+Quantidade de deadlines média cumpridas pelo escalonador 2 com 300 processos: 133.366667 +- 14.535026
+Quantidade de mudanças de contexto média cumpridas pelo escalonador 2 com 300 processos: 92.200000 +- 15.305358
+Quantidade de deadlines média cumpridas pelo escalonador 3 com 300 processos: 9.733333 +- 87.854744
+Quantidade de mudanças de contexto média cumpridas pelo escalonador 3 com 300 processos: 530.300000 +- 110.313675

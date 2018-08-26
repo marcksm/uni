@@ -1,0 +1,60 @@
+NOME: Marcos Vinicius do Carmo Sousa
+NUSP: 9298274
+NOME: Rodrigo Ribeiro Santos de Carvalho
+NUSP: 9298037
+
+
+Para compilar: make
+Para rodar: ./ep1 [porta de escolha]
+
+######### Usuário 1 ##########
+
+usuário: rodrigo
+senha: 123456
+
+######### Usuário 2 ##########
+
+usuário: marcos
+senha: 123456
+
+######## Requisitos ###########
+
+**Configurar um email para esse servidor apartir de um email existente, 
+(editando as configurações do servidor, como porta, endereço, usuario e etc..)
+o método de adicionar novo endereço de email testando conexão com o servidor
+não é suportado.
+
+Nas configurações do Thunderbird, pedimos que, ao excluir uma mensagem, remover
+imediatamente (Configurações de conta -> Servidor -> marcar Remover
+imediatamente).
+
+Tambem pedimos para não permitir notificações imediatas do servidor 
+(Configurações de conta -> Servidor -> desmarcar Permitir notificações imediatas
+do servidor quando novas mensagens chegarem).
+
+####### Descrição UID emails ########
+
+Cada novo email após ser identificado pelo servidor é renomeado e transferido para
+pasta ./@usuario/Maildir/cur, seguindo o seguinte padrão:
+
+1_0_0_0
+| | | |------> LIST FLAG, 0 == INBOX
+| | |--------> DELETE FLAG, 1 == DELETED, 0 == NOT DELETED
+| |----------> SEEN/UNSEEN FLAG, 0 == UNSEEN, 1 == SEEN.
+|------------> UID do email
+
+##### Adicionar novos emails #######
+
+Para adicionar novos emails a um usuario basta colar-los na pasta 
+./@usuario/Maildir/new e no Thunderbird clicar em "Get Messages"
+na Inbox do @usuario.
+
+
+#### Adicionar novos usuarios ######
+
+Para adicionar novos usuarios basta acessar o arquivo users na pasta raiz
+do ep e adicionar uma nova linha com o padrão:
+usuario senha
+
+O servidor se encarrega de criar as pastas e arquivos no formato Maildir.
+#####################################

@@ -1,0 +1,32 @@
+Nome: Rodrigo Ribeiro Santos de Carvalho          NUSP: 9298037
+Nome: Marcos Vinicius do Carmo Sousa              NUSP: 9298274
+
+
+==== COMO DEFINIR AS REGRAS DO FIREWALL ====
+
+1- Crie um arquivo chamado "rules" em /home/mininet/pox. O caminho está hardcoded na
+variável filename_rules em firewall.py
+
+2- Em cada linha, coloque cada regra no seguinte formato:
+
+[Endereço IP de origem] [Endereço IP de destino] [Porta (camada de tranporte) de origem] [Porta de destino] [protocolo da camada de tranporte]
+
+    Para não especificar um dos itens, coloque "-1"
+    
+    Exemplo:
+    mininet@mininet-vm:~/pox$ cat rules 
+    10.0.0.2 10.0.0.1 -1 7777 tcp
+    10.0.0.3 10.0.0.2 80 -1 udp
+    10.0.0.1 10.0.0.2 -1 -1 -1
+    
+    
+    A primeira linha é a primeira regra. Ela especifica para não aceitar pacotes TCP
+de origem 10.0.0.2 não importando a porta de origem e que tenha destino 10.0.0.1 com
+a porta 7777.
+
+    A segunda linha é a segunda regra. Ela especifica para não aceitar pacotes UDP
+de com origem 10.0.0.3 com porta de origem (da camada de transporte) 80 e que tenha
+destino 10.0.0.2 não importando a porta de destino.
+    
+    A terceira linha bloqueará todos os pacotes com IP de origem 10.0.0.1
+e com IP de destino 10.0.0.2, não importando as portas e o protocolo.

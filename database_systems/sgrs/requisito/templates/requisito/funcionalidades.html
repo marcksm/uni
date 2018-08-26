@@ -1,0 +1,98 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container">
+    <h1>Requisito {{requisito.titulo}}</h1>
+    <hr>
+    <p>{{requisito.descricao}}</p>
+    <hr>
+    <div class="row">
+        <div class="col-9"><h3>Funcionalidades</h3></div>
+        <div class="col-3"><button class="btn btn-block btn-info" href="/funcionalidade/criar" data-toggle="modal" data-target="#funcionalidadeModal">+ Adicionar Funcionalidade</button></div>
+    </div>
+    <p>Veja abaixo os funcionalidades referente ao projeto {{ projeto.nome }} e requisito {{ requisito.titulo }}.</p>
+    {% if funcionalidades %}
+    <table class="table table-hover">
+        <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Descrição</th>
+            <th scope="col"></th>
+            <th scope="col"></th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for funcionalidade in funcionalidades %}
+        <tr>
+            <th scope="row">{{ funcionalidade.id }}</th>
+            <td>{{ funcionalidade.descricao }}</td>
+            <td>
+                <button class="btn btn-block btn-info btn-sm btn-block"  data-toggle="modal" data-target="#funcionalidadeModal{{funcionalidade.id}}">Editar</button>
+            </td>
+            <td>
+                <a class="btn btn-block btn-danger btn-sm btn-block" href="/projeto/{{projeto.id}}/requisitos/{{requisito.id}}/excluir/{{funcionalidade.id}}">Excluir</a>
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+    {% else %}
+    <br>
+    <div class="alert alert-info" role="alert">Sem funcionalidades cadastrados...</div>
+    {% endif %}
+</div>
+
+<!-- Modal conteúdo novo -->
+<div class="modal fade" id="funcionalidadeModal" tabindex="-1" role="dialog" aria-labelledby="funcionalidadeModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <form method="post">{% csrf_token %}
+      <div class="modal-header">
+        <h5 class="modal-title" id="funcionalidadeModalLabel">Nova Funcionalidade</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+      <div class="form-group">
+        <label for="message-text" class="col-form-label">Descriçao:</label>
+        <textarea class="form-control" name="descricao"></textarea>
+      </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="submit" class="btn btn-primary">Salvar</button>
+      </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+{% for funcionalidade in funcionalidades %}
+<!-- edicao conteudo antigo -->
+<div class="modal fade" id="funcionalidadeModal{{funcionalidade.id}}" tabindex="-1" role="dialog" aria-labelledby="funcionalidadeModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <form method="post">{% csrf_token %}
+      <input type="hidden" name="pk" value="{{funcionalidade.id}}">
+      <div class="modal-header">
+        <h5 class="modal-title" id="funcionalidadeModalLabel">Editar Funcionalidade</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+      <div class="form-group">
+        <label for="message-text" class="col-form-label">Descriçao:</label>
+        <textarea class="form-control" name="descricao">{{funcionalidade.descricao}}</textarea>
+      </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="submit" class="btn btn-primary">Salvar</button>
+      </div>
+      </form>
+    </div>
+  </div>
+</div>
+{% endfor %}
+{% endblock %}

@@ -1,0 +1,46 @@
+Coisas a se pensar:
+
+
+- Como implementar a pista de modo a permitir velocidade de 30 km/s?
+(0.5m por 60ms)
+
+- Como proteger o acesso ás posições da pista por mais de um ciclista (thread)?
+
+- A barreira funciona para um numero fixo de threads ciclístas, mas sabemos que
+uma thread ciclista tem a probabilidade de "quebras" durante a competição. Como
+fazer a barreira nestes casos onde já não temos todas as threads de 1 até
+2*n ([1;2*n])?
+
+- Utilizar ou não uma thread "juiz" para coordenar o evento, chegando quando
+uma equipe vence e atualizando o tempo total de simulação?
+
+- Onde e como excluir os ciclístas que já cruzaram a linha de chegada (16 voltas)
+
+- Não esquecer de tirar o ciclista da pista quando quebrar
+
+
+
+
+
+Eventos que devem ser impressos:
+
+Ciclista quebrou: A volta em que ele estava, a posição em que ele estava nessa volta e o identificador dele
+
+A saı́da do seu programa deve ser um relatório informando a cada volta completada pelo terceiro
+ciclista de uma equipe, todos os 3 primeiros ciclistas daquela equipe, o número da volta, e o instante
+de tempo que esse terceiro ciclista passou pela linha de chegada (considere que a simulação começa
+no instante de tempo 0).
+
+Ao término da corrida (depois que todos os ciclistas passarem pela linha de
+chegada), deve ser informada qual equipe chegou em primeiro e qual chegou em segundo, ou se houve
+empate.
+
+A ordem final de chegada de todos os ciclistas, considerando a ordenação da sua equipe e
+o instante de tempo que cada ciclista cruzou a linha de chegada também deve ser impresso na saı́da.
+
+Ciclistas que quebrarem devem ser identificados como tendo quebrado e, ao invés de mostrar as suas
+posições, deve ser informada a volta em que eles quebraram.
+
+Seu programa deve ainda permitir uma
+opção de debug que informa a cada 60ms o status de cada posição da pista, ou seja, o identificador do(s)
+ciclista(s) naquela posição ou a informação de que não há nenhum ciclista ali.

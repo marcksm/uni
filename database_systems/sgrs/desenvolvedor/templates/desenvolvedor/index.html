@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container">
+    <div class="row justify-content-md-center">
+        <div class="col">
+            <h3>Seja bem vindo!</h3>
+            <hr>
+            <p>
+                O SGRS é um Sistema de Gerenciamento de Projetos de Software em Fase
+                de Expecificação. Na plataforma, é possível gerenciar a especificação
+                de um projeto de software, criando requisitos de dados e requisitos
+                funcionais. Além disso, os vários desenvolvedores de um projeto
+                podem definir, ver e acompanhar as tarefas restantes para a expecificação
+                de um projeto.
+            </p>
+        </div>
+    </div>
+    <div class="row justify-content-md-center">
+        <div class="col-3">
+            <div style="text-align: center">
+                <a href='/desenvolvedor/login'>Faça login</a><br>
+                ou<br>
+                <a href='/desenvolvedor/signup'>Cadastre-se</a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

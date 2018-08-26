@@ -1,0 +1,115 @@
+Lista 5:
+
+1) Seja v-w um arco de um grafo G, suponha que submetemos G a uma busca em
+largura e suponha que v é descoberto e numerado antes de w. É verdade que
+o arco v-w passa a fazer parte da árvore da BFS?
+
+R: Não pois o grafo pode ter uma configuração que faça com que exista um x
+tal que x-w seja verificado antes de v-w, assim após x e v forem numerados,
+temos que w sendo numerado pelo x, fazendo o arco x-w na arvore da BFS.
+
+2)**** Considere as definições de arcos de retorno, de avanço e cruzados como na
+DFS. A árvore BFS de um grafo não dirigido pode ter arcos de retorno? De
+avanço? Cruzados?
+R: Em um grafo não dirigido não possível ter arcos de retorno nem de avanço,
+de retorno não pois o algortimo explora eles como filhos diretos, e avanço 
+a mesma coisa 
+
+3) Escreva uma função que recebe um grafo não dirigido conexo G e devolve o par
+de vértices u e v tal que a distancia de u a v em G é máxima, entre todos os
+pares de vértices possiveis. Chamamos esta distancia de diametro do grafo
+Qual o tempo de consumo de sua função?
+
+struct pair {
+  Vertex u;
+  Vertex v;
+};
+typedef struct pair *Pair;
+
+int getmax (UGraph G, int *dist) {
+  int max = -1; k = -1;
+  for (int i = 0; i < G->V; i++)
+    if (dist[i] > max) {max = dist[i]; k = i;}
+  return k;
+}
+
+4) Prove a seguinte propriedade dos segmentos de caminhos mínimos: Se C é um 
+caminho mínimo num grafo entao cada segmento de C também é um caminho minimo.
+
+R)
+Seja o caminho C minímo, e C-(v) , o segmento excluindo o ultimo vértice do 
+caminho C. Suponhamos que C-(v) não é minimo, então existe um caminho C'-(v)
+que é minimo e |C'-(v)| < |C-(v)|, então adicionando o ultimo vértice temos
+que |C'| < |C| o que contradiz a hipótese, então C-(v) é minimo e fazendo isso
+para qualquer segmento é minimo também.
+
+
+
+5) ?????
+
+
+6) Escreva uma função que use busca em largura para calcular as componentes 
+conexas de um grafo não-dirigido, ou seja, devolve um vetor cc[] que identifica
+a componente conexa de cada vértice do grafo não dirigido.
+
+
+int *GRAPHscc (UGraph G) {
+  Vertex v;
+  cnt= 0;
+  int *cc = malloc (G->V * sizeof (int));
+  int scc = 0;
+  for (v = 0; v < G->V; v++)
+    num[v] = parent[v] = -1;
+  for (v = 0; v < G->V; v++)
+    if (num[v] == -1)
+      scc = bfscc(G, v, cc, scc + 1);
+  return cc;
+}
+
+int bfscc (UGraph G, Vertex v, int *cc, int scc) {
+  link p;
+  Queue Q;
+  Q = QUEUEinit (G->V);
+  num[v] = cnt++;
+  parent[v] = v;
+  cc[v] = scc;
+  QUEUEput (Q, v);
+  while (!QUEUEempty (Q)) {
+    u = QUEUEget(Q);
+    for (p = G->adj[u]; p != NULL; p = p->next) {
+      if (num[p->w] == -1) {
+        parent[p->w] = u;
+        num[p->w] = cnt++;
+        cc[p->w] = scc;
+        QUEUEput (Q, p->w);
+        
+      }
+
+    }
+  }
+  QUEUEfree(Q);
+  return scc;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

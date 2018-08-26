@@ -1,0 +1,32 @@
+/*******************************************************************************
+
+    Marcos Vinicius do Carmo Sousa  nº USP: 9298274
+    Matheus Tavares Bernardino      nº USP: 9292987
+
+
+*******************************************************************************/
+EP2
+
+                            COMPILAÇÂO
+
+
+    Para compilar do código-fonte e gerar basta chamar o utilitário make no
+diretorio deste arquivo, pelo terminal. Não é necessário utilizar nenhum
+parâmetro.
+
+                             EXECUÇÂO
+
+Para executar o ep2, é necesário chama-lo usando, no mínimo, 3 argumentos. Em
+ordem, são eles:
+    - Um inteiro maior ou igual a 250, para ser usado como tamanho da pista.
+    - Um inteiro maior ou igual a 5, para ser usado como a quantidade de
+ciclistas por equipe.
+    - O caracter 'u' ou 'v', onde 'u' indica para o programa realizar a
+simulação com velocidades uniformes de 60km/h e 'v' para realizar com
+velocidades variaveis tal como descrito no enunciado do ep2.
+
+O ep2 admite ainda um 4º argumento: Se além destes 3 argumentos inciais, for
+passado como 4º argumento a string '-d' o ep2 imprimirá na saida padrão, a
+configuração da pista a cada 60ms.
+
+O ep2 gerará um arquivo de saida chamado "Relatório_Simulação.txt"

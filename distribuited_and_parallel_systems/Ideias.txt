@@ -1,0 +1,7 @@
+- Sinal. Fazer Rx/|Rx|. Modulo com intrinsics
+- Fazer uma matriz com os deltas de R, G (zero), e B. Somar depois com intrinsics
+- Fazer uma matriz de tetas. Somar com intrinsics
+- OpenMP, minha gente. Taca-le openMP
+- Alguns unroll seria legal junto com intrinsics. Iria acelerar pra caramba
+
+- Substituir todas as contas como (255.0/256.0) pelo valor já calculado

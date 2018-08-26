@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container">
+    <div class="row justify-content-md-center">
+        <div class="col-9">
+            <h1>Nova tarefa do projeto: {{ projeto.nome }}</h1>
+            <hr>
+            <form method="post">
+                {% csrf_token %}
+                <p> Nome </p> <input type="text" name="nome" class="form-control"/> </br>
+                <p> Descrição</p> <textarea name="descricao" class="form-control"></textarea> </br>
+                <p> Data </p> <input type="date" name="deadline" class="form-control"/> </br>
+                <button type="submit" class="btn btn-default">Criar</button>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}

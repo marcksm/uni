@@ -1,6 +1,0 @@
-set xlabel "Arestas"
-set ylabel "Distância média entre dois vértices diferentes"
-set title perc
-set term png
-set output out
-plot in using 1:2 with lines

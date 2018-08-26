@@ -1,6 +1,0 @@
-set xlabel "Vertices"
-set ylabel "Arestas"
-set title perc
-set term png
-set output out
-plot in using 1:2 with lines

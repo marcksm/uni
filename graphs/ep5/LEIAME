@@ -1,6 +1,0 @@
-
-
-Nesse exercicio foi feito a média das distancias entre dois vértices considerando somente os vértices que estão conectados em um grafo não dirigido. Utilizando V como vértices V = 50, 100, 150,  ..., 300
-e arestas E variando de 1 até V*V*V em passos de 2*E.
-É importante notar os graficos gerados apartir do programa, nele percebe-se claramente que quanto mais próximo o grafico fica de um grafo completo com V(V-1)/2 arestas uniformemente distribuidas a distancia tende a 1.0.
-Inicialmente o valor é 0 pois o grafo esta desconexo sem nenhuma aresta, mas esse valor aumenta rapidamente com a conexão de algumas arestas e depois diminui tendendo a 1.

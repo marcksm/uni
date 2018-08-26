@@ -1,6 +1,0 @@
-
-A função GRAPHminpath (G, weight, s, e), recebe um grafo, um vetor de pesos para cada vértice, um vértice marcando o inicio do caminho, e outro vértice marcando o fim, e devolve o caminho minimo caso exista.
-
-Supondo que não existam vértices com pesos negativos, é realizado a distribuição dos pesos nas arestas que saem do vértice e assim roda-se o Dijkstra normalmente no grafo. 
-
-Na main existe um teste implementado. basta rodar ./ep6

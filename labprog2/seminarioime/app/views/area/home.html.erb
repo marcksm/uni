@@ -1,0 +1,93 @@
+<% if user_signed_in? %>
+  <h1>My Area</h1>
+
+  <hr>
+
+  <% if current_user.student? %>
+    <h3>Interested Seminars</h3>
+    <% if @interested.empty? %>
+      <p>You don't have interests</p>
+    <% else %>
+      <table class="table table-striped table-hover">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Group</th>
+            <th>Description</th>
+            <th>Place</th>
+            <th>Date</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <% @interested.each do |i| %>
+            <tr class="clickable" onclick="goto('<%= i.id %>')">
+              <td><%= i.name %></td>
+              <td><%= i.group.name %></td>
+              <td><%= truncate(i.description, length: 300) %></td>
+              <td><%= i.place %></td>
+              <td><%= i.date %></td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+    <% end %>
+    <hr>
+  <% end %>
+
+  <h3>All Seminars</h3>
+<% else %>
+  <h1>Seminars</h1>
+  <hr>
+<% end %>
+
+<%= form_tag(root_path, :method => "get", id: "search-form") do %>
+   <div class="input-group", style="margin-bottom: 25px">
+    <%= text_field_tag :search, params[:search], class: "form-control" %>
+    <span class="input-group-btn">
+      <%= submit_tag "Search", :name => nil, class: "btn btn-default" %>
+    </span>
+  </div>
+<% end %>
+
+<table class="table table-bordered table-striped table-hover">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Group</th>
+      <th>Description</th>
+      <th>Place</th>
+      <th>Date</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @seminars.each do |s| %>
+      <tr class="clickable" onclick="goto('<%= s.id %>')">
+        <td><%= s.name %></td>
+        <td><%= s.group.name %></td>
+        <td><%= truncate(s.description, length: 300) %></td>
+        <td><%= s.place %></td>
+        <td><%= s.date %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<% if user_signed_in? && current_user.professor? %>
+    <%= link_to 'New Seminar', new_seminar_path, class: "btn btn-default" %>
+<% end %>
+
+
+<script>
+function goto (to) {
+  var base = '<%= request.base_url + '/seminars/' %>';
+  window.location.href = base + to;
+}
+</script>
+
+<style>
+.clickable {
+  cursor: pointer;
+}
+</style>

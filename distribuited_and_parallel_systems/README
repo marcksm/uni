@@ -1,0 +1,6 @@
+Lucas Seiki Oshiro             - 9298228
+Marcos Vinicius do Carmo Sousa - 9298274
+Matheus Tavares Bernardino     - 9292987
+
+Como compilar: utilize o comando make
+Como executar: utilize ./EP arquivo_de_entrada arquivo_de_saida número_de_iterações número_de_processadores

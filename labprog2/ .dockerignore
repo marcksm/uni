@@ -1,0 +1,15 @@
+# Git metadata
+.git
+.gitignore
+
+# GitLab metadata
+.gitlab-ci.yml
+
+# Docker configuration files
+.dockerignore
+Dockerfile
+docker-compose.yml
+
+# Node stuff
+/node_modules/
+/ts-node/

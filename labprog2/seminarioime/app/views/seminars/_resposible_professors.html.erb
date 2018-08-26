@@ -1,0 +1,12 @@
+<table class="table table-bordered table-striped">
+    <thead>
+        <th>Name</th>
+    </thead>
+    <tbody>
+        <% @seminar.responsibilities.each do |responsibility| %>
+            <tr>
+                <td><%= responsibility.user.name %></td>
+            </tr>
+        <% end %>
+    </tbody>
+</table>
